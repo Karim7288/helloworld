@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'applogin_slave' }
 
     parameters {
         choice(name: 'ENVIRONMENT', choices: ['dev', 'staging', 'prod'], description: 'Choose environment to deploy')
